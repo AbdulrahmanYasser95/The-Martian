@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta http-equiv="refresh" content="5">
+        <title>Arduino Web Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       
+        </head>
+
+    <body>
+        <h1>Hello from Arduino!</h1>
+        <p>A web page from the Arduino server</p>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+    </body>
+</html>
+<!--<!DOCTYPE HTML>
+<html>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<body>
+    <span id="temp">Waiting for data...</span><br>
+    <span id="tstamp"></span><br>
+ 
+    <script type="text/javascript">
+
+      window.setInterval(function() {
+
+        var deviceID = "<< device id >>";
+        var accessToken = "<< access token >>";
+        var varName = "temperature";
+
+        requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
+        $.getJSON(requestURL, function(json) {
+                 document.getElementById("temp").innerHTML = json.result + "&deg; F";
+                 document.getElementById("temp").style.fontSize = "28px";
+                 document.getElementById("tstamp").innerHTML = json.coreInfo.last_heard;
+                 });
+    }, 10000);
+    </script>
+</body>
+</html>
+
+-->
+
+<?php
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("webdictionary.txt"));
+fclose($myfile);
+?>
